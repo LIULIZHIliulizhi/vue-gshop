@@ -1,12 +1,8 @@
 <template>
   <section class="profile">
-    <header class="header">
-      <a class="header_title">
-        <span class="header_title_text">我的</span>
-      </a>
-    </header>
+    <TopHeader title="我的"/>
     <section class="profile-number">
-      <a href="javascript:" class="profile-link">
+      <a href="javascript:" class="profile-link" @click="$router.push('/login')">
         <div class="profile_image">
           <i class="iconfont icon-person"></i>
         </div>
@@ -20,7 +16,7 @@
           </p>
         </div>
         <span class="arrow">
-              <i class="iconfont icon-jiantou1"></i>
+              <i class="iconfont icon-jiantou1" @click="$router.back()"></i>
             </span>
       </a>
     </section>

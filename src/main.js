@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 
 
 //注册TopHearder全局组件
-Vue.directive(TopHeader)
+Vue.component('TopHeader',TopHeader)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
