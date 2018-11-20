@@ -4,8 +4,8 @@
       <div class="login_header">
         <h2 class="login_logo">硅谷外卖</h2>
         <div class="login_header_title">
-          <a href="javascript:;" class="on">短信登录</a>
-          <a href="javascript:;">密码登录</a>
+          <a href="javascript:;" class="on" @click="">短信登录</a>
+          <a href="javascript:;"  @click="">密码登录</a>
         </div>
       </div>
       <div class="login_content">
@@ -54,7 +54,13 @@
 
 <script>
 
-  export default{}
+  export default{
+    data(){
+      return {
+      
+      }
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

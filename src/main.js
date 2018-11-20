@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from'./router'
+import store from './store'
 import TopHeader from './components/TopHeader/TopHeader.vue'
-Vue.config.productionTip = false
 
+
+Vue.config.productionTip = false
 
 //注册TopHearder全局组件
 Vue.component('TopHeader',TopHeader)
@@ -13,5 +15,6 @@ Vue.component('TopHeader',TopHeader)
 new Vue({
   el: '#app',
   render: h=>h(App),
-  router
+  router,
+  store
 })
