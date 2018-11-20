@@ -4,13 +4,17 @@
 import {
   reqAddress,
   reqFoodCategory,
-  reqShops
+  reqShops,
+  reqUserInfo,
+  reqLoginOut
 }from '../api'
 import {
   RECEIVE_ADDRESS,
   RECEIVE_CATEGORY,
-  RECEIVE_SHOPS
-}from './mutation-types'
+  RECEIVE_SHOPS,
+  RECEIVE_USER,
+  RESET_USER
+}from './mutation-types';
 export default {
   async getAddress({commit,state}){
     const {latitude,longitude} = state
@@ -33,6 +37,22 @@ export default {
     if(result.code===0){
       const shops = result.data
       commit(RECEIVE_SHOPS,{shops})
+    }
+  },
+  saveUser({commit},user){
+    commit(RECEIVE_USER,{user})
+  },
+  async getUserInfo ({commit}) {
+    const result = await reqUserInfo()
+    if(result.code===0) {
+      const user = result.data
+      commit(RECEIVE_USER, {user})
+    }
+  },
+  async logout({commit}){
+    const result = await  reqLoginOut()
+    if(result.code===0){
+      commit(RESET_USER)
     }
   }
 }

@@ -8,9 +8,13 @@
 <script>
  import Vue from 'vue'
 import FooterGuide from './components/FootreGuide/FooterGuide.vue'
+
 export default {
   components:{
     FooterGuide
+  },
+  mounted(){
+    this.$store.dispatch('getUserInfo')
   }
 }
 </script>
