@@ -15,7 +15,7 @@
               <input type="tel" maxlength="11" placeholder="手机号" v-model="phone">
               <button :disabled=" !isRightPhone || computeTime>0 "
                       class="get_verification"
-                      :class="{right_phone_number:isRightPhone}"
+                      :class="{right_phone_number:isRightPhone && computeTime<=0}"
                       @click.prevent="sendCode">
                 {{ computeTime>0 ? `已发送${computeTime}s` : '请获取验证码'}}
               </button>

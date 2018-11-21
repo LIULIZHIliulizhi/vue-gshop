@@ -6,7 +6,7 @@ import App from './App.vue'
 import router from'./router'
 import store from './store'
 import TopHeader from './components/TopHeader/TopHeader.vue'
-
+import './mock/mockServer'//mock 数据只要运行一次就可以 访问 模拟的接口地址 ，拦截发送的ajax请求 返回mock库模拟的数据
 
 Vue.config.productionTip = false
 
